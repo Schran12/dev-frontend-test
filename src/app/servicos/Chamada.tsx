@@ -1,21 +1,24 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants, Easing } from "framer-motion";
 import Link from "next/link";
 
-export default function Chamada() {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
+// Define easing explicitamente para TypeScript
+const ease: Easing = "easeOut";
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease,
+    },
+  },
+};
+
+export default function Chamada() {
   return (
     <motion.section
       className="bg-[#181c2c] text-white py-16 px-4 text-center"
@@ -28,7 +31,7 @@ export default function Chamada() {
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Pronto para Otimizar Sua Indústria?
         </h2>
-        <p className="text-lg mb-8">
+        <p className="text-lg md:text-xl mb-8 leading-relaxed">
           Entre em contato conosco e descubra como nossas soluções inteligentes podem transformar seus processos e aumentar a sustentabilidade.
         </p>
         <Link
@@ -41,4 +44,5 @@ export default function Chamada() {
     </motion.section>
   );
 }
+
 

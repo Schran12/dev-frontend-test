@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants, Easing } from "framer-motion";
 
 export default function ContactAddresses() {
   const addresses = [
@@ -9,7 +9,7 @@ export default function ContactAddresses() {
     { title: "Ceará", text: "Av. Fictícia, 890, sala 10,\nCentro\n62000-000 Fortaleza/CE" },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -20,14 +20,14 @@ export default function ContactAddresses() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as Easing, 
       },
     },
   };
@@ -56,4 +56,5 @@ export default function ContactAddresses() {
     </section>
   );
 }
+
 

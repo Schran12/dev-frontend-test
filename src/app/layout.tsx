@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </main>
         <Footer />
 
-        {/* Botão flutuante do WhatsApp */}
+        
         <Link
           href="https://wa.me/5511999999999"
           target="_blank"
