@@ -76,6 +76,12 @@ Essa combinação garante um site **rápido, responsivo, otimizado para SEO** e,
 
 ---
 
+## 🌐 Site no ar
+
+ - Deploy: https://dev-frontend-test-es1w.vercel.app/
+
+---
+
 ## 🚀 Instalação e Execução
 
 Siga os passos abaixo para rodar o projeto localmente:
