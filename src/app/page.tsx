@@ -24,7 +24,7 @@ export default function HomePage() {
     <>
       <Head>
         <title>Bloomin | Soluções Industriais e Tecnológicas</title>
-        <meta name="description" content="Bloomin oferece automação industrial, robótica, IoT e soluções personalizadas para empresas nacionais e internacionais." />
+        <meta name="description" content="InduMax oferece automação industrial, robótica, IoT e soluções personalizadas para empresas nacionais e internacionais." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://www.matheusschran.com.br" />
         <meta property="og:title" content="Bloomin | Soluções Industriais e Tecnológicas" />

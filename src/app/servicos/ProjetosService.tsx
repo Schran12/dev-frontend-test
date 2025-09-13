@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants, Easing } from "framer-motion";
 
 const projects = [
   {
@@ -22,18 +22,23 @@ const projects = [
 ];
 
 export default function ProjetosService() {
-  const containerVariants = {
+  // Variants tipados
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.2 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { staggerChildren: 0.2 } 
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.5, ease: "easeOut" as Easing } // ✅ tipagem explícita
+    },
   };
 
   return (
@@ -76,4 +81,5 @@ export default function ProjetosService() {
     </section>
   );
 }
+
 
