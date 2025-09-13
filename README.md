@@ -44,6 +44,38 @@ Principais objetivos:
 
 ---
 
+## Porque escolhi esta stack❓
+
+Optei por utilizar **Next.js** e **Tailwind CSS** neste projeto porque juntos eles oferecem um equilíbrio ideal entre **performance, produtividade e boas práticas de mercado**.
+
+- **Next.js**  
+  - Permite **renderização no servidor (SSR)** e **geração de páginas estáticas (SSG)**, o que melhora bastante o SEO.  
+  - Traz **performance otimizada**, com carregamento rápido e suporte nativo a otimização de imagens.  
+  - Possui **roteamento baseado em arquivos**, o que simplifica muito a estrutura do projeto.  
+  - É um framework consolidado e amplamente utilizado em aplicações reais, garantindo escalabilidade e maturidade.
+
+- **Tailwind CSS**  
+  - Proporciona **agilidade no desenvolvimento**, permitindo criar interfaces responsivas diretamente através de classes utilitárias.  
+  - Facilita a **manutenção** e garante consistência visual ao longo do projeto.  
+  - Oferece **personalização fácil** no `tailwind.config.js`, permitindo adaptar o design system da aplicação.  
+  - Gera um **CSS final enxuto**, já que só inclui as classes realmente utilizadas no projeto.
+
+Essa combinação garante um site **rápido, responsivo, otimizado para SEO** e, ao mesmo tempo, de **fácil manutenção e evolução**.
+
+---
+
+## Como foi implementada a API❓
+
+  - Utiliza a API pública ViaCEP para buscar endereço pelo CEP.
+  - Validação: aceita apenas 8 dígitos numéricos.
+  - Requisição com Axios:
+     - Preenche automaticamente os campos do formulário: rua, bairro, cidade, estado.
+     - Tratamento de erros:
+     - CEP inválido → alerta e limpa campos.
+     - Erro na requisição → alerta de erro.
+
+---
+
 ## 🚀 Instalação e Execução
 
 Siga os passos abaixo para rodar o projeto localmente:
@@ -73,5 +105,3 @@ http://localhost:3000
 Para build de produção:
 npm run build
 npm run start
-
-
