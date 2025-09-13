@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/* Removendo a fonte Roboto e Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
@@ -11,18 +10,14 @@ html, body, #__next {
   padding: 0;
 }
 
-
 body {
-  /* Aplicando a fonte Raleway em todo o corpo do site */
   font-family: 'Raleway', sans-serif;
   background-color: #f9fafb;
   color: #111827;
 }
 
-/* Removendo a definição específica para h1, h2, etc., para que a fonte Raleway seja usada por padrão */
-
 section {
-  scroll-margin-top: 5rem; /* Para navbar fixa */
+  scroll-margin-top: 5rem; 
 }
 
 @theme inline {
@@ -143,25 +138,50 @@ section {
   }
 }
 
-/* Estilos Específicos para a Timeline (no seu globals.css) */
 @media (min-width: 768px) {
   .right-timeline {
-    left: 50%; /* Alinha o card à direita da linha */
+    left: 50%; 
   }
 
   .left-timeline {
-    left: 0; /* Alinha o card à esquerda */
-    text-align: right; /* Alinha o texto do card à direita */
+    left: 0; 
+    text-align: right; 
   }
 
-  /* Ajusta o conteúdo do card esquerdo para não cobrir a linha */
   .left-timeline > div:nth-child(2) {
-    margin-right: calc(50% + 2.5rem); /* 50% da largura + metade do círculo (10px de largura + 40px de margin) */
+    margin-right: calc(50% + 2.5rem); 
     margin-left: 0;
   }
-  /* Ajusta o conteúdo do card direito */
+  
   .right-timeline > div:nth-child(2) {
-    margin-left: calc(50% + 2.5rem); /* 50% da largura + metade do círculo */
+    margin-left: calc(50% + 2.5rem); 
     margin-right: 0;
   }
 }
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181c2c;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a81a1a;
+  border-radius: 6px;
+  border: 3px solid #181c2c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff2a2a;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a81a1a #181c2c;
+}
+
